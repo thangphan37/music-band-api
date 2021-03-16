@@ -23,7 +23,7 @@ const LYRICS = {
 
 async function crawlSong(song = '', {playlist, singerName, avatar} = {}) {
   try {
-    const browser = await puppeteer.launch({headless: true})
+    const browser = await puppeteer.launch({headless: false})
     const page = await browser.newPage()
     await page.goto(playlist)
 

@@ -24,7 +24,7 @@ const LYRICS = {
 async function crawlSong(song = '', {playlist, singerName, avatar} = {}) {
   try {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       args: ['--no-sandbox'],
     })
     const page = await browser.newPage()

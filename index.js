@@ -24,6 +24,6 @@ app.get('/', (req, res) => {
 
 app.use(require('./api/'))
 
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Music band api listening at http://localhost:${port}`)
 })
